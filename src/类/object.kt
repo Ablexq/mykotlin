@@ -7,7 +7,18 @@ package 类
  * object声明的类，无法在外部用new的方式重新实例化
  */
 object Utils {
+    //常量要用const（static）
     const val BASE_URL = "http://www.baidu.com/"
+
+    //延迟加载的变量（static）
+    lateinit var text: String
+
+    //静态常量（static）
+    @JvmField
+    var testField: String = "666"
+
+    //方法要带@JvmStatic
+    @JvmStatic
     fun getOS(): String {
         return "linux"
     }
