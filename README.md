@@ -16,6 +16,16 @@ val ages1 = age?.toInt()
 
 //age为空返回-1
 val ages2 = age?.toInt() ?: -1
+
+//let，为null不执行uploadPhoto
+private var mPhotoUrl: String? = null
+fun uploadClicked() {
+    mPhotoUrl?.let { uploadPhoto(it) }
+}
+
+//itemdata不为null返回cover
+//cover不为null返回feed
+val cover = itemData?.cover?.feed?:""
 ```
 
 # 操作符/运算符重载(operator overload)
