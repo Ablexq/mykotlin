@@ -21,6 +21,7 @@ class CompanionDemo {
         //使用const
         const val TYPE2: String = "companion TYPE2"
 
+        val TYPE3: String = "companion TYPE3"
 
         //延迟加载的变量（static）
         lateinit var text: String
